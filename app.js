@@ -22,9 +22,9 @@ app.get("/v1/explorers", (req, res) => {
 
 app.get("/v1/explorers/:id", (req, res) => {
     console.log(`GET BY ID Explorers V1 API ${new Date()}`)
-    const explorer1 = { id: 1, name: "Explorer1" }
-    // HTTP CODE STATUS: 
-    res.status(200).json(explorer1)
+    console.log(`Getting explorer with id ${req.params.id}`)
+    const explorer = { id: 1, name: "Fernando" }
+    res.status(200).json(explorer)
 })
 
 app.listen(port, () => {
